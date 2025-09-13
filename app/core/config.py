@@ -40,7 +40,9 @@ class Settings(BaseSettings):
     REDIS_URL: str = Field(default="redis://localhost:6379/0", env="REDIS_URL")
     
     # AI Model Configuration
+    # Google Gemini API Key
     GOOGLE_API_KEY: Optional[str] = Field(default=None, env="GOOGLE_API_KEY")
+    GEMINI_API_KEY: Optional[str] = Field(default=None, env="GEMINI_API_KEY")
     OPENAI_API_KEY: Optional[str] = Field(default=None, env="OPENAI_API_KEY")
     DEFAULT_LLM_PROVIDER: str = Field(default="gemini", env="DEFAULT_LLM_PROVIDER")
     

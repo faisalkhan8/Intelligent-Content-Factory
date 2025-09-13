@@ -25,7 +25,7 @@ class ContentService:
     def __init__(self):
         self.llm = LLM(
             model="gemini/gemini-1.5-flash",
-            api_key=os.getenv("GOOGLE_API_KEY")
+            api_key=os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
         )
         self._content_store = []  # Temporary in-memory storage
         self._next_id = 1
